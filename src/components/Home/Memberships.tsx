@@ -2,11 +2,11 @@ import React from 'react';
 
 const Memberships: React.FC = () => {
     const logos = [
-        { name: 'Australia Federation of Travel Agents', imageUrl: '/src/assets/memberOf/afta-logo.webp' },
-        { name: 'International Air Transport Association', imageUrl: '/src/assets/memberOf/iata.webp' },
-        { name: 'Government of Nepal', imageUrl: '/src/assets/memberOf/nepal-gov.webp' },
-        { name: 'Nepal Association of Tour and Travel Agents', imageUrl: '/src/assets/memberOf/natta-logo.webp' },
-        { name: 'Nepal Tourism Board', imageUrl: '/src/assets/memberOf/ntb.webp' },
+        { name: 'Australia Federation of Travel Agents', imageUrl: '/assets/memberOf/afta-logo.webp' },
+        { name: 'International Air Transport Association', imageUrl: '/assets/memberOf/iata.webp' },
+        { name: 'Government of Nepal', imageUrl: '/assets/memberOf/nepal-gov.webp' },
+        { name: 'Nepal Association of Tour and Travel Agents', imageUrl: '/assets/memberOf/natta-logo.webp' },
+        { name: 'Nepal Tourism Board', imageUrl: '/assets/memberOf/ntb.webp' },
     ];
 
     return (

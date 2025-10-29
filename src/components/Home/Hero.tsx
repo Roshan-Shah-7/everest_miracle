@@ -3,17 +3,17 @@ import BookingWidget from './BookingWidget'; // Assuming this component exists
 
 const slides = [
     {
-        imageUrl: "/src/assets/home/heroSlider1.webp",
+        imageUrl: "/assets/home/heroSlider1.webp",
         title: "Exploring The World In Comfort",
         description: "Experience unparalleled comfort and breathtaking scenery on our bespoke journeys.",
     },
     {
-        imageUrl: "/src/assets/home/heroSlider2.webp",
+        imageUrl: "/assets/home/heroSlider2.webp",
         title: "Reach New Heights With Us",
         description: "Our expert guides will lead you safely through the most majestic landscapes on Earth.",
     },
     {
-        imageUrl: "/src/assets/home/heroSlider3.webp",
+        imageUrl: "/assets/home/heroSlider3.webp",
         title: "Your Adventure Awaits",
         description: "Discover hidden trails, vibrant cultures, and the adventure of a lifetime.",
     },
@@ -107,15 +107,8 @@ const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
                     {/* Hero Content */}
                     <div className="text-white space-y-4 sm:space-y-6 z-20" aria-live="polite"> {/* Improved spacing */}
-                        {/* Slide Indicator */}
-                        <div className="flex items-center space-x-2 mb-1 sm:mb-2">
-                            <span className="text-xs sm:text-sm font-medium text-white/80 uppercase tracking-wider font-sans">
-                                Slide {String(currentSlide + 1).padStart(2, '0')} of {String(slides.length).padStart(2, '0')}
-                            </span>
-                        </div>
-
                         {/* Animated Text Content */}
-                        <div className="relative min-h-[150px] sm:min-h-[200px] md:min-h-[250px] lg:min-h-[300px]">
+                        <div className="relative h-40 sm:h-48 md:h-56 lg:h-64 overflow-hidden">
                             {slides.map((slide, index) => (
                                 <div
                                     key={index}

@@ -76,7 +76,7 @@ const Testimonial: React.FC = () => {
             {/* Background with reduced opacity */}
             <div 
                 className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
-                style={{ backgroundImage: "url('/src/assets/home/heroSlider2.webp')" }}
+                style={{ backgroundImage: "url('/assets/home/heroSlider2.webp')" }}
             ></div>
             
             {/* Gradient Overlay */}

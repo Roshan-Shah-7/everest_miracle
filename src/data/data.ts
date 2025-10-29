@@ -107,7 +107,7 @@ export const packages: Package[] = [
     destinations: ['kathmandu', 'pokhara', 'annapurna'],
     price: '$1800',
     description: 'Circuit trek through the Annapurna region',
-    imageUrl: '/src/assets/tours/Annapurna.webp'
+    imageUrl: '/assets/tours/Annapurna.webp'
   },
   {
     id: 'pokhara-relax',

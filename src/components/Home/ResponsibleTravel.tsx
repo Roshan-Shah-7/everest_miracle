@@ -74,7 +74,7 @@ const ResponsibleTravel: React.FC = () => {
                     <div className="order-1 lg:order-2">
                         <div className="relative group">
                             <img
-                                src="/src/assets/home/responsible1.webp"
+                                src="/assets/home/responsible1.webp"
                                 alt="Local community in Nepal practicing sustainable tourism"
                                 className="rounded-2xl shadow-xl group-hover:scale-105 transition-transform duration-500"
                             />
@@ -92,14 +92,14 @@ const ResponsibleTravel: React.FC = () => {
                         <div className="grid grid-cols-2 gap-4 mt-6 place-items-center">
                             <div className="relative group">
                                 <img
-                                    src="/src/assets/home/heroSlider1.webp"
+                                    src="/assets/home/heroSlider1.webp"
                                     alt="Community development project"
                                     className="rounded-lg h-32 lg:h-50 object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                             </div>
                             <div className="relative group">
                                 <img
-                                    src="/src/assets/home/heroSlider3.webp"
+                                    src="/assets/home/heroSlider3.webp"
                                     alt="Environmental conservation efforts"
                                     className="rounded-lg h-32 lg:h-50 object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
