@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-50: #e8eaed;
+  --color-primary-100: #c4c9d1;
+  --color-primary-200: #9ea6b3;
+  --color-primary-300: #788395;
+  --color-primary-400: #526077;
+  --color-primary-500: #2c3d59;
+  --color-primary-600: #26354d;
+  --color-primary-700: #1f2b38;
+  --color-primary-800: #18222c;
+  --color-primary-900: #111820;
+  --color-my-custom-color: #ff00ff;
+  --color-logo-green: #8ec73e;
+  --color-logo-green-light: #97cc52;
+  --color-logo-green-dark: #73a940;
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

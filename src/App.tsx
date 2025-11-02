@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header"
 import HomePage from "./pages/Home"
-import type { Page } from './types';
 import Footer from './components/Footer';
+import About from './pages/About';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
-
   return (
-    <React.Fragment>
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <HomePage setCurrentPage={setCurrentPage} />
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
       <Footer />
-    </React.Fragment>
+    </Router>
   )
 }
 

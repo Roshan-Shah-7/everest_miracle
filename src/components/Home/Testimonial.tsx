@@ -72,7 +72,7 @@ const Testimonial: React.FC = () => {
     };
 
     return (
-        <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
+        <section className="relative py-20 bg-primary-900 text-white overflow-hidden">
             {/* Background with reduced opacity */}
             <div 
                 className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
@@ -85,7 +85,7 @@ const Testimonial: React.FC = () => {
             <div className="relative container mx-auto px-6">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <span className="inline-block px-4 py-1.5 bg-[#83bf48]/20 text-[#83bf48] rounded-full text-sm font-medium mb-4 border border-[#83bf48]/30">
+                    <span className="inline-block px-4 py-1.5 bg-logo-green/20 text-logo-green rounded-full text-sm font-medium mb-4 border border-logo-green/30">
                         Testimonials
                     </span>
                     <h2 className="text-4xl font-bold mb-4">What Our Adventurers Say</h2>
@@ -101,7 +101,7 @@ const Testimonial: React.FC = () => {
                             <div className="flex justify-center mb-4">
                                 {renderStars(testimonials[activeTestimonial].rating)}
                             </div>
-                            <span className="inline-block px-3 py-1 bg-[#83bf48]/20 text-[#83bf48] text-sm rounded-full">
+                            <span className="inline-block px-3 py-1 bg-logo-green/20 text-logo-green text-sm rounded-full">
                                 {testimonials[activeTestimonial].trip}
                             </span>
                         </div>
@@ -142,7 +142,7 @@ const Testimonial: React.FC = () => {
                                     onClick={() => goToTestimonial(index)}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                                         index === activeTestimonial 
-                                        ? 'bg-[#83bf48] scale-125' 
+                                        ? 'bg-logo-green scale-125' 
                                         : 'bg-white/30 hover:bg-white/50'
                                     }`}
                                     aria-label={`Go to testimonial ${index + 1}`}
@@ -169,7 +169,7 @@ const Testimonial: React.FC = () => {
                         {testimonials.slice(0, 3).map((testimonial, index) => (
                             <div 
                                 key={testimonial.id} 
-                                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#83bf48]/30 transition-all duration-300 hover:transform hover:-translate-y-2 cursor-pointer"
+                                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-logo-green/30 transition-all duration-300 hover:transform hover:-translate-y-2 cursor-pointer"
                                 onClick={() => goToTestimonial(index)}
                             >
                                 <div className="flex mb-4">
@@ -183,7 +183,7 @@ const Testimonial: React.FC = () => {
                                         <p className="font-semibold text-white">{testimonial.author}</p>
                                         <p className="text-sm text-gray-400">{testimonial.location}</p>
                                     </div>
-                                    <span className="px-2 py-1 bg-[#83bf48]/20 text-[#83bf48] text-xs rounded-full">
+                                    <span className="px-2 py-1 bg-logo-green/20 text-logo-green text-xs rounded-full">
                                         {testimonial.trip}
                                     </span>
                                 </div>
@@ -194,12 +194,12 @@ const Testimonial: React.FC = () => {
 
                 {/* CTA Section */}
                 <div className="text-center mt-16">
-                    <div className="bg-linear-to-r from-[#83bf48]/10 to-transparent p-8 rounded-2xl border border-[#83bf48]/20 max-w-2xl mx-auto">
+                    <div className="bg-linear-to-r from-logo-green/10 to-transparent p-8 rounded-2xl border border-logo-green/20 max-w-2xl mx-auto">
                         <h3 className="text-2xl font-bold mb-4">Ready to Create Your Own Story?</h3>
                         <p className="text-gray-300 mb-6">
                             Join thousands of satisfied travelers and experience the adventure of a lifetime.
                         </p>
-                        <button className="px-8 py-3 bg-[#83bf48] text-white font-semibold rounded-lg hover:bg-[#73a940] transition-all duration-300 transform hover:scale-105">
+                        <button className="px-8 py-3 bg-logo-green text-white font-semibold rounded-lg hover:bg-logo-green-dark transition-all duration-300 transform hover:scale-105">
                             Start Your Journey Today
                         </button>
                     </div>

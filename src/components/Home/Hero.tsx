@@ -142,13 +142,13 @@ const Hero: React.FC = () => {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-3 sm:pt-4">
                             <button
-                                className="bg-[#83bf48] text-[#1a2336] font-bold py-2.5 sm:py-3 px-4 sm:px-6 md:py-4 md:px-8 rounded-lg hover:bg-[#97cc52] transform hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl text-sm sm:text-base md:text-lg font-sans"
+                                className="bg-logo-green text-primary-800 font-bold py-2.5 sm:py-3 px-4 sm:px-6 md:py-4 md:px-8 rounded-lg hover:bg-logo-green-light transform hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl text-sm sm:text-base md:text-lg font-sans"
                                 aria-label="Explore our tour packages"
                             >
                                 Explore Tours
                             </button>
                             <button
-                                className="border-2 border-white text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 md:py-4 md:px-8 rounded-lg hover:bg-white hover:text-[#1a2336] transform hover:scale-105 transition-all duration-300 cursor-pointer text-sm sm:text-base md:text-lg font-sans"
+                                className="border-2 border-white text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 md:py-4 md:px-8 rounded-lg hover:bg-white hover:text-primary-800 transform hover:scale-105 transition-all duration-300 cursor-pointer text-sm sm:text-base md:text-lg font-sans"
                                 aria-label="Learn more about our services"
                             >
                                 Learn More
@@ -170,7 +170,7 @@ const Hero: React.FC = () => {
                                 >
                                     <div
                                         className={`h-1 rounded-full transition-all duration-500 ${currentSlide === index
-                                            ? 'bg-[#83bf48]'
+                                            ? 'bg-logo-green'
                                             : 'bg-white/50 group-hover:bg-white/80'
                                             }`}
                                     />
