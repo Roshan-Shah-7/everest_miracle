@@ -41,6 +41,7 @@ const Header: React.FC = () => {
         { path: '/', label: 'Home' },
         { path: '/about', label: 'About Us' },
         { path: '/tours', label: 'Tours' },
+        { path: '/why-nepal', label: 'Why Nepal?' },
         { path: '/ticketing', label: 'Ticketing' },
     ];
 

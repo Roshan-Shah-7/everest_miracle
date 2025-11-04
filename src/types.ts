@@ -1,14 +1,3 @@
-export type TourCategory = 'Trekking' | 'Cultural' | 'Bespoke';
-
-export interface Tour {
-    id: number;
-    name: string;
-    category: TourCategory;
-    price: number;
-    imageUrl: string;
-    shortDescription: string;
-}
-
 export interface TeamMember {
     id: number;
     name: string;

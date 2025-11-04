@@ -118,36 +118,28 @@ export const packages: Package[] = [
     destinations: ['pokhara'],
     price: '$800',
     description: 'Relaxing time by the beautiful Phewa Lake',
-    imageUrl: 'https://images.unsplash.com/photo-1599112082201-9db31f42f79e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
-  }
+    imageUrl: '/assets/tours/pokhara.webp'
+  },
+  {
+    id: 'chitwan-wildlife',
+    name: 'Chitwan Wildlife Safari',
+    type: 'wildlife',
+    duration: '3days',
+    difficulty: 'Easy',
+    destinations: ['chitwan'],
+    price: '$600',
+    description: 'Explore the jungles of Chitwan and spot rare wildlife.',
+    imageUrl: '/assets/tours/chitwan.webp'
+  },
+  {
+    id: 'kathmandu-luxury',
+    name: 'Luxury Kathmandu Tour',
+    type: 'luxury',
+    duration: 'week',
+    difficulty: 'Easy',
+    destinations: ['kathmandu'],
+    price: '$2000',
+    description: 'Experience the cultural heritage of Kathmandu in style.',
+    imageUrl: '/assets/tours/kathmandu.webp'
+  },
 ];
-
-// Type import for Tour
-import type { Tour, TourCategory } from '../types';
-
-// Convert packages to Tour format for FeaturedJourneys
-export const convertPackagesToTours = (packagesList: Package[]): Tour[] => {
-  return packagesList.map((pkg, index) => {
-    // Convert difficulty to category
-    let category: TourCategory = 'Trekking';
-    if (pkg.type.includes('safari') || pkg.type.includes('wildlife')) {
-      category = 'Cultural';
-    } else if (pkg.type.includes('cultural') || pkg.type.includes('tour')) {
-      category = 'Cultural';
-    } else if (pkg.type.includes('adventure') || pkg.type.includes('luxury')) {
-      category = 'Bespoke';
-    }
-    
-    // Extract price number from string (remove $ and convert to number)
-    const priceNum = parseInt(pkg.price.replace(/\D/g, ''), 10) || 1000;
-    
-    return {
-      id: index + 1,
-      name: pkg.name,
-      category,
-      price: priceNum,
-      imageUrl: pkg.imageUrl,
-      shortDescription: pkg.description
-    };
-  });
-};

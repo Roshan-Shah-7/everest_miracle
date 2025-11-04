@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import type { Tour } from '../../types';
-import { packages, convertPackagesToTours } from '../../data/data';
+import { packages } from '../../data/data';
 import FeaturedTourCard from './FeaturedTourCard';
+import type { Package } from '../../data/types';
 
 const FeaturedJourneys: React.FC = () => {
-    const tours: Tour[] = convertPackagesToTours(packages);
-    const featured = tours.slice(0, 3);
+    const featured: Package[] = packages.slice(0, 3);
     return (
         <section className="bg-gray-50 py-16 sm:py-20" aria-labelledby="featured-journeys-title">
             <div className="container mx-auto px-4 sm:px-6">
@@ -15,7 +14,7 @@ const FeaturedJourneys: React.FC = () => {
                     <p className="text-gray-600 max-w-3xl mx-auto text-base sm:text-lg">Explore our most sought-after experiences, curated for the ultimate Himalayan adventure.</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" role="list" aria-label="Featured journeys">
-                    {featured.map((tour: Tour) => (
+                    {featured.map((tour: Package) => (
                         <div key={tour.id} role="listitem">
                             <FeaturedTourCard tour={tour} />
                         </div>

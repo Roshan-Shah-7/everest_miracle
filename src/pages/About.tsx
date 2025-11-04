@@ -29,13 +29,13 @@ const About: React.FC = () => {
             name: "Deepak Kumar Chaulagai",
             role: "Owner & Director",
             description: "Deepak is the owner and Director of Everest Miracle Travels. Everest Miracle was established in the year 2009 since the inception of the company Deepak started as its Director. He has been instrumental in driving Inbound Tour activities as well as International Ticketing of the Company. Deepak has over 20 years of experience, out of which he has spent the last decade building and maintaining market for Everest Miracle focusing in the International Ticketing and Inbound Tours of the company. Prior to Everest Miracle, Deepak served as Credit Controller at Radisson Hotel Kathmandu he handled Credit and Finance divisions at Radisson. Deepak holds Masters Degree in Management from Tribhuwan University Nepal. As a business leader with experience in building & running a market he had well contributed in grooming and leading the company to new heights.",
-            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            image: "/assets/team/deepak-kumar.webp"
         },
         {
             name: "Bharat Jung Pandey",
             role: "Owner & Operations Director",
             description: "Bharat Jung Pandey is the owner and Operations Director of Everest Miracle Travels. He completed his Graduation in Hotel Management from Pokhara University and started his career from International Chain Hotel at Kathmandu in the year 2005. From the mere start of his career he succeeded in grasping several performance awards and went abroad for his further career developments. But he always had a strong desire to work for his own country as such he returned and established his own Company in the year 2009; Today Everest Miracle is the leading travel company in Nepal. He well proved his diversities during his student years, He was selected for IFT International Exchange Programme held at Macao, which was organized by ( WTO) World Tourism Organization at the Institute for Tourism Studies. He is also a passionate photographer, his keen interest in photography led him to win award from His Excellency James F Moriarty (US Ambassador to Nepal) and senior team of Photographers organized by Wildlife Conservation Nepal at Nature and wildlife Photography competition. Besides operating a Travel company Bharat is also widely involved in many social and extra activities. He is a member of Skal Club of Kathmandu, Member of Lions International and other social organizations. He is representing the trade participating as active member of APJC committee and a senior advisor of NATTA.",
-            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            image: "/assets/team/bharat-jung.webp"
         }
     ];
 
@@ -125,63 +125,64 @@ const About: React.FC = () => {
                 </section>
             </AnimatedSection>
 
-                        {/* Certifications Section */}
-                        <AnimatedSection>
-                            <section className="py-20 bg-white">
-                                <div className="container mx-auto px-6">
-                                    <div className="text-center mb-16">
-                                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                                            Our Accreditations
-                                        </h2>
-                                        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-                                            Trusted and certified by leading international organizations
-                                        </p>
+            {/* Certifications Section */}
+            <AnimatedSection>
+                <section className="py-20 bg-white">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                Our Accreditations
+                            </h2>
+                            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                                Trusted and certified by leading international organizations
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {certifications.map((cert, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-gray-50 p-8 rounded-2xl border border-gray-200 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
+                                >
+                                    <div className="text-4xl mb-4">{cert.icon}</div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">{cert.title}</h3>
+                                    <p className="text-gray-600 text-sm">{cert.description}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* IATA Accreditation Details */}
+                        <div className="mt-16 bg-linear-to-r from-logo-green/10 to-white p-8 rounded-2xl border border-logo-green/20">
+                            <div className="max-w-4xl mx-auto text-center">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                                    IATA Accredited Travel Company
+                                </h3>
+                                <p className="text-gray-600 mb-6">
+                                    As an IATA accredited Travel Company Everest Miracle is listed among highest selling BSP Agent of
+                                    Nepal, company is registered with the office of the company registrar of Nepal under its incorporation
+                                    number 52355/064/065 which was on 17 Day of March 2008 as private limited company to sub-section
+                                    (1) of section 5 of the Companies Act 2006.
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                    <div className="bg-white px-6 py-3 rounded-lg border border-gray-300">
+                                        <div className="text-sm text-gray-500">Registration No.</div>
+                                        <div className="font-bold text-gray-900">52355/064/065</div>
                                     </div>
-            
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                                        {certifications.map((cert, index) => (
-                                            <div
-                                                key={index}
-                                                className="bg-gray-50 p-8 rounded-2xl border border-gray-200 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
-                                            >
-                                                <div className="text-4xl mb-4">{cert.icon}</div>
-                                                <h3 className="text-xl font-bold text-gray-900 mb-3">{cert.title}</h3>
-                                                <p className="text-gray-600 text-sm">{cert.description}</p>
-                                            </div>
-                                        ))}
+                                    <div className="bg-white px-6 py-3 rounded-lg border border-gray-300">
+                                        <div className="text-sm text-gray-500">Established</div>
+                                        <div className="font-bold text-gray-900">March 17, 2008</div>
                                     </div>
-            
-                                    {/* IATA Accreditation Details */}
-                                    <div className="mt-16 bg-linear-to-r from-logo-green/10 to-white p-8 rounded-2xl border border-logo-green/20">
-                                        <div className="max-w-4xl mx-auto text-center">
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                                                IATA Accredited Travel Company
-                                            </h3>
-                                            <p className="text-gray-600 mb-6">
-                                                As an IATA accredited Travel Company Everest Miracle is listed among highest selling BSP Agent of
-                                                Nepal, company is registered with the office of the company registrar of Nepal under its incorporation
-                                                number 52355/064/065 which was on 17 Day of March 2008 as private limited company to sub-section
-                                                (1) of section 5 of the Companies Act 2006.
-                                            </p>
-                                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                                                <div className="bg-white px-6 py-3 rounded-lg border border-gray-300">
-                                                    <div className="text-sm text-gray-500">Registration No.</div>
-                                                    <div className="font-bold text-gray-900">52355/064/065</div>
-                                                </div>
-                                                <div className="bg-white px-6 py-3 rounded-lg border border-gray-300">
-                                                    <div className="text-sm text-gray-500">Established</div>
-                                                    <div className="font-bold text-gray-900">March 17, 2008</div>
-                                                </div>
-                                                <div className="bg-white px-6 py-3 rounded-lg border border-gray-300">
-                                                    <div className="text-sm text-gray-500">Company Type</div>
-                                                    <div className="font-bold text-gray-900">Private Limited</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div className="bg-white px-6 py-3 rounded-lg border border-gray-300">
+                                        <div className="text-sm text-gray-500">Company Type</div>
+                                        <div className="font-bold text-gray-900">Private Limited</div>
                                     </div>
                                 </div>
-                            </section>
-                        </AnimatedSection>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </AnimatedSection>
+            
             {/* Team Section */}
             <AnimatedSection>
                 <section className="py-20 bg-gray-50">
