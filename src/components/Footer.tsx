@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { IoLocationSharp } from "react-icons/io5";
 
@@ -46,12 +46,12 @@ const Footer: React.FC = () => {
         },
         {
             name: 'Instagram',
-            href: '#',
+            href: 'https://www.instagram.com/everestmiracletreks/',
             icon: <FaInstagram className="w-5 h-5" />
         },
         {
             name: 'Twitter',
-            href: '#',
+            href: 'https://twitter.com/EverestMiracle',
             icon: <FaTwitter className="w-5 h-5" />
         },
     ];
@@ -90,12 +90,12 @@ const Footer: React.FC = () => {
                         <ul className="space-y-3">
                             {quickLinks.map((link, index) => (
                                 <li key={index}>
-                                    <a
-                                        href={link.href}
+                                    <Link
+                                        to={link.href}
                                         className="text-gray-300 hover:text-[#83bf48] transition-colors duration-300 text-sm"
                                     >
                                         {link.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -107,12 +107,12 @@ const Footer: React.FC = () => {
                         <ul className="space-y-3">
                             {services.map((service, index) => (
                                 <li key={index}>
-                                    <a
-                                        href={service.href}
+                                    <Link
+                                        to={service.href}
                                         className="text-gray-300 hover:text-[#83bf48] transition-colors duration-300 text-sm"
                                     >
                                         {service.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -153,15 +153,12 @@ const Footer: React.FC = () => {
 
                         {/* Legal Links */}
                         <div className="flex space-x-6">
-                            <a href="/privacy" className="text-gray-400 hover:text-[#83bf48] transition-colors duration-300 text-sm">
+                            <Link to="/privacy" className="text-gray-400 hover:text-[#83bf48] transition-colors duration-300 text-sm">
                                 Privacy Policy
-                            </a>
-                            <a href="/terms" className="text-gray-400 hover:text-[#83bf48] transition-colors duration-300 text-sm">
+                            </Link>
+                            <Link to="/terms" className="text-gray-400 hover:text-[#83bf48] transition-colors duration-300 text-sm">
                                 Terms of Service
-                            </a>
-                            <a href="/sitemap" className="text-gray-400 hover:text-[#83bf48] transition-colors duration-300 text-sm">
-                                Sitemap
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Developer Credit */}

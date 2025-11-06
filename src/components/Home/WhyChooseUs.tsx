@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const WhyChooseUs: React.FC = () => {
     const ToursIcon = () => (
@@ -109,12 +109,12 @@ const WhyChooseUs: React.FC = () => {
                             Join thousands of satisfied travelers who have experienced the magic of Nepal with us.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="px-8 py-3 bg-logo-green text-white font-semibold rounded-lg hover:bg-logo-green-dark transition-colors duration-300 transform hover:scale-105 shadow-lg shadow-logo-green/20">
+                            <Link to="/tours" className="px-8 py-3 bg-logo-green text-white font-semibold rounded-lg hover:bg-logo-green-dark transition-colors duration-300 transform hover:scale-105 shadow-lg shadow-logo-green/20">
                                 Book Your Trip Now
-                            </button>
-                            <button className="px-8 py-3 bg-transparent border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                            </Link>
+                            <Link to="/contact" className="px-8 py-3 bg-transparent border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                                 Contact Our Experts
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

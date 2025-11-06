@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaPlaneDeparture, FaFileContract, FaAward, FaStar } from 'react-icons/fa';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useState } from 'react';
 
 const AnimatedSection: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [setNode, entry] = useIntersectionObserver({ threshold: 0.1 });
@@ -246,12 +247,12 @@ const About: React.FC = () => {
                             Let us create the perfect travel experience for you. Contact our expert team today.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-white text-logo-green font-bold py-3 px-8 rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            <Link to="/contact" className="bg-white text-logo-green font-bold py-3 px-8 rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
                                 Contact Us Now
-                            </button>
-                            <button className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
+                            </Link>
+                            <Link to="/tours" className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
                                 View Our Tours
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </section>

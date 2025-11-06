@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ResponsibleTravel: React.FC = () => {
     const initiatives = [
@@ -117,12 +117,12 @@ const ResponsibleTravel: React.FC = () => {
                         Choose Everest Miracle for an adventure that not only transforms your life but also supports the communities and environments you visit.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="px-8 py-3 bg-logo-green text-white font-semibold rounded-lg hover:bg-logo-green-dark transition-all duration-300 transform hover:scale-105 shadow-lg shadow-logo-green/30">
+                        <Link to="/about" className="px-8 py-3 bg-logo-green text-white font-semibold rounded-lg hover:bg-logo-green-dark transition-all duration-300 transform hover:scale-105 shadow-lg shadow-logo-green/30">
                             Learn More About Us
-                        </button>
-                        <button className="px-8 py-3 bg-white border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 hover:border-logo-green/30 transition-all duration-300">
+                        </Link>
+                        <Link to="/contact" className="px-8 py-3 bg-white border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 hover:border-logo-green/30 transition-all duration-300">
                             Contact Us to Get Involved
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

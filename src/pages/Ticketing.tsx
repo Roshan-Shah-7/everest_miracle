@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TicketingPage: React.FC = () => {
     return (
@@ -35,7 +35,7 @@ const TicketingPage: React.FC = () => {
                                 <li>Our customer support team is always ready to assist you.</li>
                             </ul>
                             <p className="text-gray-700 leading-relaxed">
-                                For any custom requests or special arrangements, please don't hesitate to <a href="/contact" className="text-primary-500 hover:underline">contact us</a> directly.
+                                For any custom requests or special arrangements, please don't hesitate to <Link to="/contact" className="text-primary-500 hover:underline">contact us</Link> directly.
                             </p>
                         </div>
 

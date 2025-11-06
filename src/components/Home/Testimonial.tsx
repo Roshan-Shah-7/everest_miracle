@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Testimonial: React.FC = () => {
     const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -199,9 +200,9 @@ const Testimonial: React.FC = () => {
                         <p className="text-gray-300 mb-6">
                             Join thousands of satisfied travelers and experience the adventure of a lifetime.
                         </p>
-                        <button className="px-8 py-3 bg-logo-green text-white font-semibold rounded-lg hover:bg-logo-green-dark transition-all duration-300 transform hover:scale-105">
+                        <Link to="/tours" className="px-8 py-3 bg-logo-green text-white font-semibold rounded-lg hover:bg-logo-green-dark transition-all duration-300 transform hover:scale-105">
                             Start Your Journey Today
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

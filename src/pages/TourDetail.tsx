@@ -1,5 +1,4 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { packages } from '../data/data';
 import type { Package } from '../data/types';
 
@@ -82,9 +81,9 @@ const TourDetailPage: React.FC = () => {
                                     </span>
                                 </div>
                             </div>
-                            <button className="mt-8 w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg">
+                            <Link to="/contact" className="mt-8 w-full block text-center bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg">
                                 Book Now
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
