@@ -8,7 +8,12 @@ import ContactPage from './pages/Contact';
 import TourDetailPage from './pages/TourDetail';
 import TicketingPage from './pages/Ticketing';
 import WhyNepalPage from './pages/WhyNepal';
-import GoToTop from './components/GoToTop';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import DeepakKumar from './pages/DeepakKumar';
+import BharatJung from './pages/BharatJung';
+import TrustedHotels from './pages/TrustedHotels';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
@@ -22,9 +27,14 @@ const App = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/ticketing" element={<TicketingPage />} />
         <Route path="/why-nepal" element={<WhyNepalPage />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/team/deepak-kumar" element={<DeepakKumar />} />
+        <Route path="/team/bharat-jung" element={<BharatJung />} />
+        <Route path="/trusted-hotels" element={<TrustedHotels />} />
       </Routes>
+      <ScrollToTop />
       <Footer />
-      <GoToTop />
     </Router>
   )
 }

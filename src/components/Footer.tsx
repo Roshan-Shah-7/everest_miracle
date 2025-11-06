@@ -14,15 +14,6 @@ const Footer: React.FC = () => {
         { name: 'Contact', href: '/contact' }
     ];
 
-    const services = [
-        { name: 'Everest Base Camp Trek', href: '/everest-base-camp' },
-        { name: 'Annapurna Circuit', href: '/annapurna-circuit' },
-        { name: 'Langtang Valley Trek', href: '/langtang' },
-        { name: 'Helicopter Tours', href: '/helicopter-tours' },
-        { name: 'Cultural Tours', href: '/cultural-tours' },
-        { name: 'Adventure Sports', href: '/adventure' }
-    ];
-
     const contactInfo = [
         {
             icon: <IoLocationSharp className="w-5 h-5" />,
@@ -70,18 +61,6 @@ const Footer: React.FC = () => {
                                 life-changing experiences while promoting sustainable and responsible tourism.
                             </p>
                         </div>
-
-                        {/* Contact Information */}
-                        <div className="space-y-3">
-                            {contactInfo.map((item, index) => (
-                                <div key={index} className="flex items-center space-x-3 text-gray-300">
-                                    <div className="text-[#83bf48]">
-                                        {item.icon}
-                                    </div>
-                                    <span className="text-sm">{item.text}</span>
-                                </div>
-                            ))}
-                        </div>
                     </div>
 
                     {/* Quick Links */}
@@ -101,42 +80,36 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Services */}
+                    {/* Contact */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>
-                        <ul className="space-y-3">
-                            {services.map((service, index) => (
-                                <li key={index}>
-                                    <Link
-                                        to={service.href}
-                                        className="text-gray-300 hover:text-[#83bf48] transition-colors duration-300 text-sm"
-                                    >
-                                        {service.name}
-                                    </Link>
-                                </li>
+                        <h4 className="text-lg font-semibold mb-6 text-white">Contact</h4>
+                        <div className="space-y-4">
+                            {contactInfo.map((item, index) => (
+                                <div key={index} className="flex items-center space-x-3 text-gray-300">
+                                    <div className="text-[#83bf48]">
+                                        {item.icon}
+                                    </div>
+                                    <span className="text-sm">{item.text}</span>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
 
-                    {/* Newsletter & Social */}
+                    {/* Social */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white">Stay Connected</h4>
-
-                        {/* Social Links */}
-                        <div>
-                            <p className="text-gray-300 text-sm mb-4">Follow us on social media</p>
-                            <div className="flex space-x-4">
-                                {socialLinks.map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.href}
-                                        className="bg-gray-800 hover:bg-[#83bf48] p-2 rounded-lg transition-all duration-300 hover:scale-110"
-                                        aria-label={social.name}
-                                    >
-                                        {social.icon}
-                                    </a>
-                                ))}
-                            </div>
+                        <h4 className="text-lg font-semibold mb-6 text-white">Social</h4>
+                        <p className="text-gray-300 text-sm mb-4">Follow us on social media</p>
+                        <div className="flex space-x-4">
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.href}
+                                    className="bg-gray-800 hover:bg-[#83bf48] p-2 rounded-lg transition-all duration-300 hover:scale-110"
+                                    aria-label={social.name}
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>

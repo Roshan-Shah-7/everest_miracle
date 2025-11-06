@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaPlaneDeparture, FaFileContract, FaAward, FaStar } from 'react-icons/fa';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { useState } from 'react';
 
 const AnimatedSection: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [setNode, entry] = useIntersectionObserver({ threshold: 0.1 });
@@ -15,28 +14,20 @@ const AnimatedSection: React.FC<{ children: React.ReactNode }> = ({ children }) 
 };
 
 const About: React.FC = () => {
-    const [expanded, setExpanded] = useState<number[]>([]);
-
-    const toggleExpanded = (index: number) => {
-        if (expanded.includes(index)) {
-            setExpanded(expanded.filter((i) => i !== index));
-        } else {
-            setExpanded([...expanded, index]);
-        }
-    };
-
     const teamMembers = [
         {
             name: "Deepak Kumar Chaulagai",
             role: "Owner & Director",
             description: "Deepak is the owner and Director of Everest Miracle Travels. Everest Miracle was established in the year 2009 since the inception of the company Deepak started as its Director. He has been instrumental in driving Inbound Tour activities as well as International Ticketing of the Company. Deepak has over 20 years of experience, out of which he has spent the last decade building and maintaining market for Everest Miracle focusing in the International Ticketing and Inbound Tours of the company. Prior to Everest Miracle, Deepak served as Credit Controller at Radisson Hotel Kathmandu he handled Credit and Finance divisions at Radisson. Deepak holds Masters Degree in Management from Tribhuwan University Nepal. As a business leader with experience in building & running a market he had well contributed in grooming and leading the company to new heights.",
-            image: "/assets/team/deepak-kumar.webp"
+            image: "/assets/team/deepak-kumar.webp",
+            slug: "deepak-kumar"
         },
         {
             name: "Bharat Jung Pandey",
             role: "Owner & Operations Director",
             description: "Bharat Jung Pandey is the owner and Operations Director of Everest Miracle Travels. He completed his Graduation in Hotel Management from Pokhara University and started his career from International Chain Hotel at Kathmandu in the year 2005. From the mere start of his career he succeeded in grasping several performance awards and went abroad for his further career developments. But he always had a strong desire to work for his own country as such he returned and established his own Company in the year 2009; Today Everest Miracle is the leading travel company in Nepal. He well proved his diversities during his student years, He was selected for IFT International Exchange Programme held at Macao, which was organized by ( WTO) World Tourism Organization at the Institute for Tourism Studies. He is also a passionate photographer, his keen interest in photography led him to win award from His Excellency James F Moriarty (US Ambassador to Nepal) and senior team of Photographers organized by Wildlife Conservation Nepal at Nature and wildlife Photography competition. Besides operating a Travel company Bharat is also widely involved in many social and extra activities. He is a member of Skal Club of Kathmandu, Member of Lions International and other social organizations. He is representing the trade participating as active member of APJC committee and a senior advisor of NATTA.",
-            image: "/assets/team/bharat-jung.webp"
+            image: "/assets/team/bharat-jung.webp",
+            slug: "bharat-jung"
         }
     ];
 
@@ -221,12 +212,12 @@ const About: React.FC = () => {
                                             <h3 className="text-2xl font-bold text-gray-900 mt-2 mb-4">
                                                 {member.name}
                                             </h3>
-                                            <p className={`text-gray-600 leading-relaxed ${expanded.includes(index) ? '' : 'line-clamp-5'}`}>
+                                            <p className={`text-gray-600 leading-relaxed line-clamp-5`}>
                                                 {member.description}
                                             </p>
-                                            <button onClick={() => toggleExpanded(index)} className="mt-6 text-logo-green font-semibold hover:text-logo-green-dark transition-colors duration-300">
-                                                {expanded.includes(index) ? 'Read Less' : 'Read Full Bio →'}
-                                            </button>
+                                            <Link to={`/team/${member.slug}`} className="mt-6 text-logo-green font-semibold hover:text-logo-green-dark transition-colors duration-300">
+                                                Read Full Bio →
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

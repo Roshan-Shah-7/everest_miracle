@@ -43,6 +43,7 @@ const Header: React.FC = () => {
         { path: '/tours', label: 'Tours' },
         { path: '/why-nepal', label: 'Why Nepal?' },
         { path: '/ticketing', label: 'Ticketing' },
+        { path: '/trusted-hotels', label: 'Trusted Hotels' },
     ];
 
     const allNavItems: NavItem[] = [...navItems, { path: '/contact', label: 'Contact' }];
