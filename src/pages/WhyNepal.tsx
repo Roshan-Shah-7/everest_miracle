@@ -83,7 +83,7 @@ const WhyNepalPage: React.FC = () => {
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
                             <div className="lg:w-1/2">
                                 <img
-                                    src="/public/assets/nepal/nepal-wildlife.webp"
+                                    src="/assets/nepal/nepal-wildlife.webp"
                                     alt="Wildlife in Nepal"
                                     className="rounded-lg shadow-lg w-full h-auto"
                                 />

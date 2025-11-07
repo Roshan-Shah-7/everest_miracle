@@ -29,22 +29,26 @@ const TrustedHotels: React.FC = () => {
         {
             name: "Superior Double",
             description: "Cozy and comfortable, perfect for solo travelers or couples.",
-            features: ["Queen Bed", "City View", "Free WiFi"]
+            features: ["Queen Bed", "City View", "Free WiFi"],
+            image: "/assets/galleryHotel/superiorDouble.webp"
         },
         {
             name: "Superior Twin",
             description: "For friends traveling together, colleagues on a business trip.",
-            features: ["Twin Beds", "Garden View", "Free WiFi"]
+            features: ["Twin Beds", "Garden View", "Free WiFi"],
+            image: "/assets/galleryHotel/superiorTwin.webp"
         },
         {
             name: "Deluxe Double",
             description: "Spacious and stylish, ideal for those seeking extra comfort.",
-            features: ["King Bed", "Balcony", "Netflix"]
+            features: ["King Bed", "Balcony", "Netflix"],
+            image: "/assets/galleryHotel/deluxeDouble.webp"
         },
         {
             name: "Deluxe Twin",
             description: "Ample space, elegant furnishings & additional amenities.",
-            features: ["Twin Beds", "Mountain View", "Netflix"]
+            features: ["Twin Beds", "Mountain View", "Netflix"],
+            image: "/assets/galleryHotel/deluxeTwin.webp"
         }
     ];
 
@@ -239,10 +243,14 @@ const TrustedHotels: React.FC = () => {
                                 key={index}
                                 className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group"
                             >
-                                <div className="h-48 bg-linear-to-br from-logo-green to-logo-green-light relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                                    <div className="absolute bottom-4 left-4 text-white">
-                                        <div className="text-2xl font-bold">{room.name}</div>
+                                <div className="relative overflow-hidden">
+                                    <img 
+                                        src={room.image} 
+                                        alt={room.name} 
+                                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-4">
+                                        <div className="text-2xl font-bold text-white">{room.name}</div>
                                     </div>
                                 </div>
                                 <div className="p-6">
