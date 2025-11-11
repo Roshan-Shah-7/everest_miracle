@@ -1,10 +1,42 @@
 import React from 'react';
 
+// Enhanced Hero Section Component
+const EnhancedHero = () => (
+    <section className="relative py-32 bg-linear-to-br from-gray-900 to-[#1a2336] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')` }}></div>
+
+        <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+                <span className="inline-block px-4 py-1.5 bg-[#83bf48]/20 text-[#83bf48] rounded-full text-sm font-medium mb-4 border border-[#83bf48]/30">
+                    Welcoming Over 940,000 Visitors in 2025
+                </span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    Why Visit <span className="text-[#83bf48]">Nepal</span>?
+                </h1>
+                <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
+                    Discover a land of breathtaking beauty, rich culture, and unparalleled adventure.
+                    Join thousands of travelers experiencing Nepal's warm hospitality.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button className="bg-[#83bf48] text-white font-bold py-3 px-8 rounded-lg hover:bg-logo-green-dark transform hover:scale-105 transition-all duration-300">
+                        Plan Your Journey
+                    </button>
+                    <button className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
+                        Seasonal Guide
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+);
+
 const WhyNepalPage: React.FC = () => {
     return (
         <div className="bg-gray-50 pt-20">
             {/* Hero Section */}
-            <section
+            {/* <section
                 className="py-40 bg-cover bg-center text-white"
                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')` }}
             >
@@ -16,7 +48,9 @@ const WhyNepalPage: React.FC = () => {
                         Discover a land of breathtaking beauty, rich culture, and unparalleled adventure.
                     </p>
                 </div>
-            </section>
+            </section> */}
+            <EnhancedHero />
+
 
             {/* Main Content */}
             <section className="py-20">

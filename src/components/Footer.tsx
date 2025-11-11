@@ -103,6 +103,7 @@ const Footer: React.FC = () => {
                             {socialLinks.map((social, index) => (
                                 <a
                                     key={index}
+                                    target="_blank"
                                     href={social.href}
                                     className="bg-gray-800 hover:bg-[#83bf48] p-2 rounded-lg transition-all duration-300 hover:scale-110"
                                     aria-label={social.name}
